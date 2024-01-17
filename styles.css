@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+    font-family: kajiro;
+    src: url("./fonts/Kajiro.ttf");
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    max-width: 1600px;
+    overflow: hidden;
+    pointer-events: all;
+}
+
+a{
+    pointer-events: all;
+}
+
+button{
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#back{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#back>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#front{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+    height:100%;
+    width: 80%;
+    color: #fff;
+    pointer-events: none;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-right i{
+    display: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+nav .nav-left{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav .nav-left a>img{
+    height: 60px;
+    margin-right: 20px;
+}
+
+nav .nav-right{
+    display: flex;
+    gap: 50px;
+}
+
+.hero{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%,-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero .hero-left{
+    min-width: 35%;
+}
+
+.hero .hero-left .hero-left-elem{
+    position: relative;
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero .hero-left .hero-left-elem h1:nth-child(1){
+    top: 0%;
+}
+
+.hero .hero-left .hero-left-elem h1{
+    height: 100%;
+    width: 100%;
+    font-family: kajiro;
+    font-size: 10vw;
+    line-height: .9;
+    position: absolute;
+    top: 100%;
+}
+
+.hero .hero-left button{
+    font-family: kajiro;
+    font-size: 3vw;
+    border: none;
+    padding: .3vw 2.5vw;
+    margin-top: 2vw;
+    letter-spacing: 2px;
+}
+
+.hero .hero-right{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 30px;
+}
+
+.hero .hero-right p{
+    font-size: 10px;
+    text-align: right;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.hero .hero-right p:nth-child(3){
+    margin-bottom: 70px;
+}
+
+.hero .hero-right .imgdiv{
+    height: 140px;
+    width: 100%;
+    margin: 30px 0;
+    background-size: cover;
+    background-image: url("https://media.istockphoto.com/id/1153386427/photo/beauty-portrait-brunette-woman-with-tanned-skin-and-brown-eyes-and-fresh-healthy-skin.webp?b=1&s=170667a&w=0&k=20&c=GkOQmxUORfJoi8M_uplKMBF4N4eZpnoMVrQgkNe_jJo=")
+}
+
+@media (max-width: 640px) {
+    #front{
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 0, 234, 0.13);
+        padding: 40px 10px;
+    }
+    
+    nav{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav .nav-left a:nth-child(2),a:nth-child(3), .nav-right a{
+        display: none;
+    }
+
+    nav .nav-left a>img{
+        height: 60px;
+    }
+
+    nav .nav-right i {
+        display: block;
+        font-size: xx-large;
+        font-weight: 500;
+    }
+
+    .hero{
+        width: 100%;
+        margin-left: 20px;
+    }
+    .hero-left{
+        width: 100vw;
+    }
+
+    .hero-left-elem{
+        height: 30%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero .hero-left .hero-left-elem h1{
+        font-size: 15vh;
+    }
+
+    .hero .hero-left button{
+        padding: .8vh 4vh;
+        margin-top: 40px;
+        font-size: 4vh;
+    }
+
+    .hero-right p, .imgdiv{
+        display: none;        
+    }
+
+}
